@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class AreaCalculator {
+
+    // Method to calculate the area of a circle (π ≈ 3.1416)
+    public static float area(float radius) {
+        float pi = 3.1416f;  // Approximate value of PI
+        return pi * radius * radius;  // πr^2
+    }
+
+    // Method to calculate the area of a rectangle
+    public static float area(float length, float width) {
+        return length * width;  // length * width
+    }
+
+    // Method to calculate the area of a triangle
+    public static float area(float base, float height) {
+        return 0.5f * base * height;  // (1/2) * base * height
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Circle
+        System.out.print("Enter radius of the circle: ");
+        float radius = scanner.nextFloat();
+        System.out.println("Area of Circle: " + area(radius));
+
+        // Rectangle
+        System.out.print("Enter length of the rectangle: ");
+        float length = scanner.nextFloat();
+        System.out.print("Enter width of the rectangle: ");
+        float width = scanner.nextFloat();
+        System.out.println("Area of Rectangle: " + area(length, width));
+
+        // Triangle
+        System.out.print("Enter base of the triangle: ");
+        float base = scanner.nextFloat();
+        System.out.print("Enter height of the triangle: ");
+        float height = scanner.nextFloat();
+        System.out.println("Area of Triangle: " + area(base, height));
+
+        scanner.close();  // Close the scanner
+    }
+}
