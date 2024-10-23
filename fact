@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Factorial {
+    
+    // Method to calculate factorial
+    public static int findFactorial(int num) {
+        int factorial = 1;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i; // Multiply each number from 1 to num
+        }
+        return factorial;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Input a number
+        System.out.print("Enter a number to find its factorial: ");
+        int number = scanner.nextInt();
+        
+        // Call the method to calculate factorial
+        int result = findFactorial(number);
+        
+        // Display the result
+        System.out.println("The factorial of " + number + " is: " + result);
+        
+        scanner.close(); // Close the scanner
+    }
+}
