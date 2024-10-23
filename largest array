@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input a string from the user
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        // 1. length() - Returns the length of the string
+        int length = input.length();
+        System.out.println("Length of the string: " + length);
+
+        // 2. charAt(index) - Returns the character at the specified index
+        if (length > 0) {
+            char firstChar = input.charAt(0);
+            System.out.println("First character of the string: " + firstChar);
+        }
+
+        // 3. substring(start, end) - Extracts a portion of the string
+        if (length >= 5) {
+            String substring = input.substring(1, 5); // Get characters from index 1 to 4
+            System.out.println("Substring from index 1 to 4: " + substring);
+        }
+
+        // 4. equals() - Compares two strings for equality
+        System.out.print("Enter another string to compare: ");
+        String anotherString = scanner.nextLine();
+        boolean isEqual = input.equals(anotherString);
+        System.out.println("Is the input string equal to the second string? " + isEqual);
+
+        // 5. toLowerCase() - Converts all characters in the string to lowercase
+        String lowerCaseString = input.toLowerCase();
+        System.out.println("String in lowercase: " + lowerCaseString);
+
+        // 6. toUpperCase() - Converts all characters in the string to uppercase
+        String upperCaseString = input.toUpperCase();
+        System.out.println("String in uppercase: " + upperCaseString);
+
+        // 7. replace() - Replaces all occurrences of a character with another character
+        System.out.print("Enter a character to replace: ");
+        char oldChar = scanner.next().charAt(0);
+        System.out.print("Enter the new character: ");
+        char newChar = scanner.next().charAt(0);
+        String replacedString = input.replace(oldChar, newChar);
+        System.out.println("String after replacing '" + oldChar + "' with '" + newChar + "': " + replacedString);
+
+        scanner.close();
+    }
+}
